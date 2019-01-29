@@ -26,6 +26,11 @@ header {
  	padding: 30px;
 }
 
+.timeline {
+	border: dotted;
+	margin-left: 600px;
+}
+
 .button-container{
 	margin: 10px;
 	text-align: center;

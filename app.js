@@ -19,7 +19,7 @@ $(document).ready(function(){
   //     newT.appendTo($tweets);
   
   
-  $('button').on('click', function () {
+  $('.button').on('click', function () {
       var $tweets = $(".tweets");
           $tweets.html('');
       var index = streams.home.length - 1;
@@ -31,7 +31,7 @@ $(document).ready(function(){
               $button.addClass('user-button');
               $button.text('@' + tweet.user);
           var $tweet = $('<div></div>');
-              $tweet.html(tweet.message + '<br> --- ' + dateStr)
+              $tweet.html(tweet.message + '<br> --- ' + dateStr + '<br>' + ' <br>')
               $button.appendTo($tweets);
               $tweet.appendTo($tweets);
           index --;
@@ -43,8 +43,11 @@ $(document).ready(function(){
             name = name.slice(1);;
         var tweet = streams.users[name];
           for(var i = 0; i < tweet.length; i++) {
+            var $button = $('<button></button>');
+                $button.text('@' + name);
             var $tweet = $('<div></div>');
-              $tweet.html('@' + tweet[i].user + ': ' + tweet[i].message + '<br> --- ' + dateStr)
+              $tweet.html(tweet[i].message + '<br> --- ' + dateStr  + '<br>' + ' <br>')
+              $button.appendTo($timeline);
               $tweet.appendTo($timeline);
           }
   })

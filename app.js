@@ -20,11 +20,11 @@ $(document).ready(function(){
             $button.text('@' + tweet.user);
             $button.appendTo($tweets);
         var $tweet = $('<div></div>');
-            $tweet.html(tweet.message)
+            $tweet.text(tweet.message)
             $tweet.appendTo($tweets);
         var $date = $('<div></div>');
             $date.addClass('date');
-            $date.html(time + '<br><br>');
+            $date.html(' ' + time + '<br><br>');
             $date.appendTo($tweets);
         index --;
         }
@@ -40,11 +40,11 @@ $(document).ready(function(){
                 $button.text('@' + name);
                 $button.appendTo($timeline);
             var $tweet = $('<div></div>');
-                $tweet.html(tweet[i].message)
+                $tweet.text(tweet[i].message)
                 $tweet.appendTo($timeline);
             var $date = $('<div></div>');
                 $date.addClass('date');
-                $date.html(time + '<br><br>');
+                $date.html(' ' + time + '<br><br>');
                 $date.appendTo($timeline);    
           }
       })

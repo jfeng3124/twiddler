@@ -42,8 +42,9 @@ header {
 	font-size: 14px;
 }
 
-.img {
-	position:center;
+img{
+	margin-top: 13px;
+	margin-right: 8px;
 }
 
 .button-container{

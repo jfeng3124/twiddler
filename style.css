@@ -35,7 +35,7 @@ section {
 
 .timeline {
 	margin-top: 10px;
-	margin-left: 40px;
+	margin-left: 20px;
 	margin-right: 10px;
 	border-radius: 20px;
 	white-space: nowrap;
@@ -80,5 +80,11 @@ button {
 button:hover {
 	text-decoration: underline;
 	transition-duration: 0.4s;
+}
+
+.date {
+	font-style: italic;
+	color: grey;
+	font-size: 14px;
 }
 

@@ -7,28 +7,28 @@ header {
 	justify-content: center;
 	font-size: 24px;
 	font-family: cursive;
+	margin-bottom: 20px;
 }
 
-#section {
-	display:flex; 
-	border: double;
-	justify-content: center;
-	align-items: center;
-
-}
-.tweets {
- 	border: solid;
+section {
+	display: flex; 
+	align-items: flex-start;
+	border: solid;
+	background-color: white; 
+ 	padding: 50px;
  	margin-left: 100px;
  	margin-right: 100px;
  	margin-top: 30px;
  	margin-bottom: 50px;
- 	background-color: white; 
- 	padding: 30px;
+}
+.tweets {
+ 	margin-left: 20px;
+ 	margin-right: 50px;
 }
 
 .timeline {
-	border: dotted;
-	margin-left: 600px;
+	margin-left: 50px;
+	margin-right: 20px;
 }
 
 .button-container{
@@ -36,6 +36,19 @@ header {
 	text-align: center;
 }
 
-.button {
+button {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+button:hover {
+	color: blue;
+}
+
+.user-button {
 
 }

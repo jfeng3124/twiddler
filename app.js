@@ -25,29 +25,28 @@ $(document).ready(function(){
       var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
           var date = streams.home[index].created_at + ''
           var dateStr = date.split(' ').splice(1, 4).join(' ');
           var $button = $('<button></button>');
               $button.addClass('user-button');
               $button.text('@' + tweet.user);
+          var $tweet = $('<div></div>');
               $tweet.html(tweet.message + '<br> --- ' + dateStr)
               $button.appendTo($tweets);
               $tweet.appendTo($tweets);
           index --;
         }
       $('.user-button').on("click", function() {
-      console.log('click')
-      var $timeline = $('.timeline');
-          $timeline.html('');
-      var name = $(this).text();
-          name = name.slice(1);;
-      var tweet = streams.users[name]
-      for(var i = 0; i < tweet.length; i++) {
-        var $tweet = $('<div></div>');
-            $tweet.html('@' + tweet[i].user + ': ' + tweet[i].message + '<br>' + dateStr)
-            $tweet.appendTo($timeline);
-      }
+        var $timeline = $('.timeline');
+            $timeline.html('');
+        var name = $(this).text();
+            name = name.slice(1);;
+        var tweet = streams.users[name];
+          for(var i = 0; i < tweet.length; i++) {
+            var $tweet = $('<div></div>');
+              $tweet.html('@' + tweet[i].user + ': ' + tweet[i].message + '<br> --- ' + dateStr)
+              $tweet.appendTo($timeline);
+          }
   })
       // var name = tweet.user
       // console.log(name);

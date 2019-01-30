@@ -49,24 +49,18 @@ img{
 
 .button-container{
 	text-align: center;
+	margin-top: -10px;
 }
 
 .button {
     background: #38A1F3;
-    margin-top: -15px;
-    margin-left: 0px;
-    margin-right: 540px;
-    padding: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
+    align-items: flex-start;
+    padding: 10px;
     cursor: pointer;
     font-size: 20px;
     font-family: Helvetica Neue;
     color: white;
     border-radius: 10px;
-    border: solid;
-    border-color: white;
-    border-width: 2px;
     transition-duration: 0.4s;
 }
 .button:hover {

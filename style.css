@@ -37,7 +37,6 @@ section {
 	margin-left: 140px;
 	margin-right: 20px;
 	font-size:;
-	
 	border-radius: 20px;
 	padding: 20px;
 }
@@ -48,28 +47,38 @@ section {
 }
 
 .button {
-    background:none;
-    margin:0;
-    padding:0;
+    background: #38A1F3;
+    margin-left: 530px;
+    margin-right: 530px;
+    margin-top: 10px;
+    padding: 5px;
     cursor: pointer;
     font-size: 20px;
     transition-duration: 0.4s;
     color: white;
+    border-radius: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 2px;
 }
 .button:hover {
-	color: blue;
+	background-color: #A7DBFB;
+	border-color: #A7DBFB;
+	transition-duration: 0.8s;
 }
 
 button {
-   background:none;
+    background:none;
     border:none;
     margin:0;
     padding:0;
     cursor: pointer;
     font-size: 20px;
     transition-duration: 0.4s;
+    font-weight: bold;
 }
 
 button:hover {
-	color: blue;
+	text-decoration: underline;
+	transition-duration: 0.4s;
 }

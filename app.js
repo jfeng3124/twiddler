@@ -8,7 +8,8 @@ $(document).ready(function(){
   $('.button').on('click', function () {
       var index = streams.home.length - 1;
       var date = streams.home[index].created_at + ''
-      var dateStr = jQuery.timeago(date.split(' ').slice(1, 5).join(' '));
+      var dateStr = date.split(' ').slice(1, 5).join(' ');
+      var time = jQuery.timeago(dateStr);
 
       $tweets.html('');
 
@@ -23,7 +24,7 @@ $(document).ready(function(){
             $tweet.appendTo($tweets);
         var $date = $('<div></div>');
             $date.addClass('date');
-            $date.html(dateStr + '<br><br>');
+            $date.html(time + '<br><br>');
             $date.appendTo($tweets);
         index --;
         }
@@ -43,7 +44,7 @@ $(document).ready(function(){
                 $tweet.appendTo($timeline);
             var $date = $('<div></div>');
                 $date.addClass('date');
-                $date.html(dateStr + '<br><br>');
+                $date.html(time + '<br><br>');
                 $date.appendTo($timeline);    
           }
       })

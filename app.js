@@ -21,7 +21,7 @@ $(document).ready(function(){
               $button.appendTo($tweets);
 
           var $tweet = $('<div></div>');
-              $tweet.html(`${tweet.message} <br> ---  ${dateStr} <br> <br>`)
+              $tweet.html(`${tweet.message} <br> ---  ${dateStr} <br><br>`)
               $tweet.appendTo($tweets);
           index --;
         }
@@ -39,7 +39,7 @@ $(document).ready(function(){
                 $button.text('@' + name);
                 $button.appendTo($timeline);
             var $tweet = $('<div></div>');
-                $tweet.html(`${tweet[i].message} <br> --- ${dateStr} <br> <br>`)
+                $tweet.html(`${tweet[i].message} <br> --- ${dateStr} <br><br>`)
                 $tweet.appendTo($timeline);
           }
       })

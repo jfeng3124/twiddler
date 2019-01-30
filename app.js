@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   var $tweets = $(".tweets");
   var $timeline = $('.timeline');
-  var index = streams.home.length - 1;
+  
 
   // var initialTweets = function () {
   //   $tweets.html('');
@@ -32,6 +32,7 @@ $(document).ready(function(){
   $('.button').on('click', function () {
 
     $tweets.html('');
+    var index = streams.home.length - 1;
     var date = streams.home[index].created_at + '';
     var dateStr = jQuery.timeago(date.split(' ').slice(1, 5).join(' '));
       while(index >= 0){

@@ -7,6 +7,7 @@
 window.streams = {};
 streams.home = [];
 streams.users = {};
+streams.newTweet = 0;
 streams.users.jfeng3124 = [];
 streams.users.johnMichelin = [];
 streams.users.dahBerry = [];
@@ -14,11 +15,17 @@ streams.users.caraBern107 = [];
 streams.users.peteOsti = [];
 streams.users.Lalalalani = [];
 window.users = Object.keys(streams.users);
+window.visitor = [];
 
 // utility function for adding tweets to our data structures
 var addTweet = function(newTweet){
   var username = newTweet.user;
-  streams.users[username].push(newTweet);
+  if (username === 'visitor') {
+    visitor.push(newTweet)
+  } else {
+    streams.users[username].push(newTweet);
+  }
+  
   streams.home.push(newTweet);
 };
 
@@ -62,10 +69,14 @@ scheduleNextTweet();
 // (note: not used by the rest of this file.)
 var writeTweet = function(message){
   if(!visitor){
-    throw new Error('set the global visitor property!');
+    visitor = true;
+    streams.users.visitor = [];
+    users.push('visitor')
+    //throw new Error('set the global visitor property!');
   }
   var tweet = {};
-  tweet.user = visitor;
+  tweet.user = "visitor";
   tweet.message = message;
+  tweet.created_at = new Date();
   addTweet(tweet);
 };

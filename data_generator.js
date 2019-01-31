@@ -7,13 +7,14 @@
 window.streams = {};
 streams.home = [];
 streams.users = {};
-streams.newTweet = 0;
 streams.users.jfeng3124 = [];
 streams.users.johnMichelin = [];
 streams.users.dahBerry = [];
 streams.users.caraBern107 = [];
 streams.users.peteOsti = [];
 streams.users.Lalalalani = [];
+streams.newTweet = 0;
+
 window.users = Object.keys(streams.users);
 window.visitor = [];
 
@@ -24,10 +25,13 @@ var addTweet = function(newTweet){
     visitor.push(newTweet)
   } else {
     streams.users[username].push(newTweet);
-  }
-  
+  } 
   streams.home.push(newTweet);
+  streams.newTweet++;
+  document.title = `(${streams.newTweet} twiddler`;
 };
+
+
 
 // utility function
 var randomElement = function(array){
@@ -59,9 +63,15 @@ for(var i = 0; i < 10; i++){
   generateRandomTweet();
 }
 
+var getRandomIntInclusive = function (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random()* max - min + 1) + min;
+}
+
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 1500);
+  setTimeout(scheduleNextTweet, getRandomIntInclusive(10, 30) * 1000);
 };
 scheduleNextTweet();
 

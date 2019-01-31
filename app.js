@@ -1,21 +1,13 @@
 $(document).ready(function(){
 
-  // var $tweets = $(".tweets");
-  // var $timeline = $('.timeline');
-  
-
+//function to make tweets
   var loadTweets = function (user) {
     $('.stream').empty();
-
     if (!user) {
       streams.newTweet = 0;
-    }
-
-    
-
+    }   
     var allTweets = streams.home.slice();
     if (users.includes(user) || user === 'visitor') {
-
       allTweets = allTweets.filter(function(tweet) {
         return tweet.user === user;
       });
@@ -23,48 +15,53 @@ $(document).ready(function(){
 
     var index = allTweets.length - 1; 
     while(index >= 0){
-      
         var tweet = allTweets[index];
-        var message = tweet.message;
+        var tweetMessage = tweet.message;
         var date = jQuery.timeago(tweet.created_at);
-        var $tweet = (`div class = ${tweet.user}> @${tweet.user} </div><br>
-                       ${message}<br>
-                       ${date}<br><br>`);
-
-
-            $tweet.appendTo($tweets);
-
+        var timelineTweets = (`<span class ="${tweet.user}"> @${tweet.user} </span><br>
+                              ${tweetMessage}<br>
+                              ${date}<br><br>`);
+        $('.stream').append(timelineTweets);
         index --;
     }
     $('.tweets').scrollTop();
 
   }
 
-  loadTweets();
-
-  $('.load-tweets').click(function () {
+//handlers
+  $('#load-tweets').click(function () {
     loadTweets();
   });
 
-  $('.main-container')click('div', function() {
-    var clicked = $(this).attr('class');
+  $('.main-container').on('click','span', function() {
+    let clicked = $(this).attr('class');
     if (users.includes(clicked)) {
       loadTweets(clicked);
     }
   })
 
-  $('.load-user-tweet')click(function(message) {
-    var message = $('.user-tweet');
-    writeTweet(message.val());
+  $('.input-tweet').keypress(function(event) {
+    if (event.key === 'Enter') {
+      let message = $(this);
+      if (message.length > 0) {
+        writeTweet(message.val());
+      }
+    loadTweets();
+    }    
+  })
+
+  $('header').click(function() {
     loadTweets();
   })
 
- 
+//initial tweets
+  loadTweets();
 });
 
 
 //old code
-
+// var $tweets = $(".tweets");
+// var $timeline = $('.timeline');
 // var loadTweets = function () {
 
 //     $tweets.html('');
@@ -138,7 +135,7 @@ $(document).ready(function(){
   //       $date.addClass('date');
   //       $date.html(' ' + date + '<br><br>');  
 
-  //   $button.appendTo($tweets);
+//  $button.appendTo($tweets);
   //   $tweet.appendTo($tweets);
   //   $date.appendTo($tweets);
   // });

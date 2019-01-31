@@ -43,8 +43,9 @@ header {
 }
 
 img{
-	margin-top: 13px;
-	margin-right: 8px;
+	margin-top: 16px;
+	margin-right: 6px;
+	margin-left: 5px;
 }
 
 .button-container{
@@ -52,7 +53,7 @@ img{
 	margin-top: -10px;
 }
 
-.button {
+.load-tweets {
     background: #38A1F3;
     align-items: flex-start;
     padding: 10px;
@@ -63,7 +64,7 @@ img{
     border-radius: 10px;
     transition-duration: 0.4s;
 }
-.button:hover {
+.load-tweets:hover {
 	background-color: #8ed2fc;
 	border-color: #8ed2fc;
 	transition-duration: 0.8s;

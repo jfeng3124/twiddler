@@ -1,0 +1,9 @@
+things to do:
+set up user-submitted tweets forms
+have it load into $tweets box
+modal box
+make nav bar with home
+collapse old tweets
+automatically load new tweets in a collapsible button
+add profile page
+make hashtags into buttons

@@ -4,26 +4,45 @@
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <script src = "app.js"></script>
-    <script src="timeago.js"></script>
+    <script src="timeago.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
     
-    <header><img src="twitter-logo.png" alt="logo" style="width:30px;height:25px;">Twiddler.</header>
+    <header>
+    <img src="twitter-logo.png" alt="logo" style="width:28px;height:23px;">
+    <div id = 'title'>twiddler.</div>
+    </header>
     
 
-    <div class = 'body-container'>
+    <div class = 'main-container'>
 
-      <div class = "button-container">
-        <div class = "button">Show new tweets</div>
+      <div class = 'user-container'>
+        <div id = 'user-tweet'>
+          Username:
+          <input class= 'input-user' type="text" name="user-name" placeholder="Enter username">
+          <input class= 'input-tweet' type="text" name="user-tweet" placeholder="What's happening?">
+        </div>
+        <div class = 'load-user-tweet'>Tweet</div>
       </div>
+
+      
 
       <div class = 'tweets-container'>
-        <div class = 'tweets'></div>
-        <div class = 'timeline'></div>
-      </div>
 
+        <div id = "load-tweets">
+         <p>Show new tweets</p>
+        </div>
+        <div id = 'timeline-title'>
+         <h1>timeline</h1>
+        </div>
+        <div class = 'tweets'>
+          <ul class = 'timeline'></ul>
+        </div>
+
+      </div>
     </div>
+
   </body>
 </html>

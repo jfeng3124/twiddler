@@ -7,7 +7,7 @@ $(document).ready(function(){
       streams.newTweet = 0;
     }   
     var allTweets = streams.home.slice();
-    if (users.includes(user) || user === 'visitor') {
+    if (users.includes(user) || user === 'Visitor') {
       allTweets = allTweets.filter(function(tweet) {
         return tweet.user === user;
       });
@@ -18,9 +18,9 @@ $(document).ready(function(){
         var tweet = allTweets[index];
         var tweetMessage = tweet.message;
         var date = jQuery.timeago(tweet.created_at);
-        var timelineTweets = (`<span class ="${tweet.user}"> @${tweet.user} </span><br>
+        var timelineTweets = (`<li><span class ="${tweet.user}">@${tweet.user}<br></span>
                               ${tweetMessage}<br>
-                              ${date}<br><br>`);
+                              <div class = 'time'>${date}</div><br></li>`);
         $('.stream').append(timelineTweets);
         index --;
     }
@@ -29,7 +29,7 @@ $(document).ready(function(){
   }
 
 //handlers
-  $('#load-tweets').click(function () {
+  $('.load-tweets').click(function () {
     loadTweets();
   });
 
@@ -47,6 +47,7 @@ $(document).ready(function(){
         writeTweet(message.val());
       }
     loadTweets();
+    message.val('');
     }    
   })
 

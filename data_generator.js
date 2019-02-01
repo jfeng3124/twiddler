@@ -21,7 +21,7 @@ window.visitor = [];
 // utility function for adding tweets to our data structures
 var addTweet = function(newTweet){
   var username = newTweet.user;
-  if (username === 'visitor') {
+  if (username === 'Visitor') {
     visitor.push(newTweet)
   } else {
     streams.users[username].push(newTweet);
@@ -71,7 +71,7 @@ var getRandomIntInclusive = function (min, max) {
 
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, getRandomIntInclusive(10, 30) * 1000);
+  setTimeout(scheduleNextTweet, getRandomIntInclusive(5, 10) * 1000);
 };
 scheduleNextTweet();
 
@@ -81,11 +81,11 @@ var writeTweet = function(message){
   if(!visitor){
     visitor = true;
     streams.users.visitor = [];
-    users.push('visitor')
+    users.push('Visitor')
     //throw new Error('set the global visitor property!');
   }
   var tweet = {};
-  tweet.user = "visitor";
+  tweet.user = "Visitor";
   tweet.message = message;
   tweet.created_at = new Date();
   addTweet(tweet);

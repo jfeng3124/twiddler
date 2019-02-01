@@ -1,7 +1,6 @@
 things to do:
-set up user-submitted tweets forms
-have it load into $tweets box
-modal box
+//set up user-submitted tweets forms
+//have it load into .tweets box
 make nav bar with home
 collapse old tweets
 automatically load new tweets in a collapsible button

@@ -98,7 +98,6 @@ input[type=text] {
 	display: flex;
 	width: 250px;
 	height: 250px;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin-top: 30px;
@@ -108,7 +107,7 @@ input[type=text] {
 .profile img {
 	justify-content: center;
 	align-items: center;
-	margin-top: -160px;
+	margin-top: -55px;
 	border: 3px solid;
 	border-color: white;
 	border-radius: 70px;
@@ -128,6 +127,19 @@ input[type=text] {
 	font-size: 20px;
 	font-family: Arial;
 	color: #1b496e;
+	opacity: 0.6;
+}
+
+#bio {
+	margin-top: 20px;
+	margin-left: 15px;
+	font-family: Helvetica;
+	font-weight: lighter;
+}
+
+#bio p {
+	font-size: 14px;
+	opacity: 0.6;
 }
 
 .world-trends {
@@ -142,8 +154,8 @@ input[type=text] {
 	font-family: Arial;
 	font-weight: bold;
 	margin-bottom: 5px;
-	margin-top: 5px;
-	color: #1b496e;
+	margin-top: 15px;
+	color: #18486f;
 	background: #91d2fa;
 	padding-top: 8px;
 	padding-bottom: 8px;
@@ -280,7 +292,8 @@ input[type=text] {
 
 .time {
 	font-style: italic;
-	color: grey;
+	font-weight: lighter;
+	color: darkgrey;
 	font-size: 14px;
 }
 

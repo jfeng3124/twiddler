@@ -30,7 +30,7 @@ streams.names.sailoruranus = 'Haruka Tenou';
 streams.names.sailorneptune = 'Michiru Kaioh';
 streams.names.sailorsaturn = 'Hotaru Tomoe';
 streams.names.sailorpluto = 'Setsuna Meiou';
-streams.names.visitor = 'Guest Scout';
+streams.names.visitor = 'Jia Feng';
 
 streams.users.sailormoon = [];
 streams.users.sailormercury = [];

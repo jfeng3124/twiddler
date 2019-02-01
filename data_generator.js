@@ -7,15 +7,40 @@
 window.streams = {};
 streams.home = [];
 streams.users = {};
-streams.users.jfeng3124 = [];
-streams.users.johnmichelin = [];
-streams.users.daBerry = [];
-streams.users.hackreactor = [];
-streams.users.ubrami = [];
-streams.users.benpolling = [];
-streams.users.danbooru = [];
-streams.users.hpessy = [];
-streams.users.azucenareyes = [];
+streams.names = {};
+streams.avatars = {};
+
+streams.avatars.sailormoon = '<img src="assets/moon.png" width="60" alt="Sailor Moon Profile Picture">';
+streams.avatars.sailormercury = '<img src="assets/mercury.png" width="60" alt="Sailor Mercury Profile Picture">';
+streams.avatars.sailorvenus = '<img src="assets/venus.png" width="60" alt="Sailor Venus Profile Picture">';
+streams.avatars.sailormars = '<img src="assets/mars.png" width="60" alt="Sailor Mars Profile Picture">';
+streams.avatars.sailorjupiter = '<img src="assets/jupiter.png" width="60" alt="Sailor Jupiter Profile Picture">';
+streams.avatars.sailoruranus = '<img src="assets/uranus.png" width="60" alt="Sailor Uranus Profile Picture">';
+streams.avatars.sailorneptune = '<img src="assets/neptune.png" width="60" alt="Sailor Neptune Profile Picture">';
+streams.avatars.sailorsaturn = '<img src="assets/saturn.png" width="60" alt="Sailor Saturn Profile Picture">';
+streams.avatars.sailorpluto = '<img src="assets/pluto.png" width="60" alt="Sailor Pluto Profile Picture">';
+streams.avatars.visitor = '<img src="assets/guest.png" width="60" alt="Guest Profile Picture">';
+
+streams.names.sailormoon = 'Usagi Tsukino';
+streams.names.sailormercury = 'Ami Mizuno';
+streams.names.sailorvenus = 'Minako Aino';
+streams.names.sailormars = 'Rei Hino';
+streams.names.sailorjupiter = 'Makoto Kino';
+streams.names.sailoruranus = 'Haruka Tenou';
+streams.names.sailorneptune = 'Michiru Kaioh';
+streams.names.sailorsaturn = 'Hotaru Tomoe';
+streams.names.sailorpluto = 'Setsuna Meiou';
+streams.names.visitor = 'Guest Scout';
+
+streams.users.sailormoon = [];
+streams.users.sailormercury = [];
+streams.users.sailorvenus = [];
+streams.users.sailormars = [];
+streams.users.sailorjupiter = [];
+streams.users.sailoruranus = [];
+streams.users.sailorneptune = [];
+streams.users.sailorsaturn = [];
+streams.users.sailorpluto = [];
 
 window.users = Object.keys(streams.users);
 window.visitor = [];

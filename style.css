@@ -12,27 +12,28 @@ header {
 	margin-left: 200px;
 }
 
-img {
+header img {
 	margin-top: 16px;
 	margin-right: 6px;
 	margin-left: 5px;
 }
 
-p {
-	font-size: 20px;
-}
-
 span {
 	font-family: Arial;
-	font-weight: bold;
-	font-size:22px;
-	color:#12344f;
+	font-size:15px;
+	color:#12345d;
 }
 
 span:hover {
 	text-decoration: underline;
 	cursor: pointer;
 	color: #2098D1;
+}
+
+strong {
+	font-weight: bold;
+	font-size: 22px;
+	color:#12344f;
 }
 
 li, ul {
@@ -226,9 +227,16 @@ input[type=text] {
 }
 
 .tweets li:hover {
-  background-color: #ffeaf3;
-  border: 2px solid;
-  border-color: #2098D1;
+ 	background-color: #ffeaf3;
+  	border: 2px solid;
+  	border-color: #2098D1;
+}
+
+.tweets li img {
+  float:left;
+  padding-top: 5px;
+  padding-right: 15px;
+
 }
 
 .time {
@@ -239,7 +247,7 @@ input[type=text] {
 
 .input-tweet::placeholder { 
     font-size: 15px;
-    color:#d3edfe;
+    color: #d3edfe;
 }
 
 

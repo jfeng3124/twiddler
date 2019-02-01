@@ -38,9 +38,12 @@ $(document).ready(function(){
 
   $('.input-tweet').keypress(function(event) {
     if (event.key === 'Enter') {
-      let message = $(this);
-      if (message.length > 0) {
+      let message = $(this).slice();
+      let messageSplit = message.val().split('');
+      if (messageSplit.length > 0) {
         writeTweet(message.val());
+      } else {
+        alert("You didn't write anything! Please enter a tweet.")
       }
     loadTweets();
     message.val(''); 
@@ -48,9 +51,14 @@ $(document).ready(function(){
   });
 
   $('.submit').click(function(event) {
-      let message = $('.input-tweet');
-      if (message.length > 0) {
+      let message = $('.input-tweet').slice();
+      console.log(message.val())
+      let messageSplit = message.val().split('');
+      console.log(messageSplit)
+      if (messageSplit.length > 0) {
         writeTweet(message.val());
+      } else {
+        alert("You didn't write anything! Please enter a tweet.")
       }
     loadTweets();
     message.val('');  

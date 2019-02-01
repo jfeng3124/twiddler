@@ -48,6 +48,7 @@ input[type=text] {
 .main-container {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 	border-radius: 20px;
 	background-color: white; 
@@ -63,26 +64,31 @@ input[type=text] {
 .user-container {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-}
-
-#user-tweet {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 }
 
+
 .input-tweet {
-	width: 60%;
+	width: 500px;
 	height: 60px;
 	margin: 20px;
+	margin-left: 0px;
 	border: 1px solid;
 	border-color: #8ed2fc ;
 	border-radius: 5px;
 }
 
 .submit{
-
+	background: none;
+	cursor: pointer;
+	font-size: 12px;
+	border: 2px solid;
+	border-color: #91D2FA;
+	border-radius: 10px;
+	color: #91D2FA;
 }
 
 .tweets-container {
@@ -93,7 +99,8 @@ input[type=text] {
 
 .load-tweets {
     background: #38A1F3;
-    width: 600px;
+    opacity: 0.7;
+    width: 500px;
     cursor: pointer;
     font-size: 20px;
     font-family: Helvetica Neue;
@@ -102,12 +109,12 @@ input[type=text] {
     color: white;
     transition-duration: 0.4s;
     text-align: center;
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .load-tweets:hover {
-	background-color: #8ed2fc;
-	border-color: #8ed2fc;
+	background-color:#91D2FA;
 	transition-duration: 0.8s;
 }
 
@@ -118,7 +125,7 @@ input[type=text] {
 .tweets {
 	overflow: auto;
 	height: 600px;
-	width: 600px;
+	width: 500px;
 
 }
 

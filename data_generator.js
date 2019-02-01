@@ -8,12 +8,14 @@ window.streams = {};
 streams.home = [];
 streams.users = {};
 streams.users.jfeng3124 = [];
-streams.users.johnMichelin = [];
-streams.users.dahBerry = [];
-streams.users.caraBern107 = [];
-streams.users.peteOsti = [];
-streams.users.Lalalalani = [];
-streams.newTweet = 0;
+streams.users.johnmichelin = [];
+streams.users.daBerry = [];
+streams.users.hackreactor = [];
+streams.users.ubrami = [];
+streams.users.benpolling = [];
+streams.users.danbooru = [];
+streams.users.hpessy = [];
+streams.users.azucenareyes = [];
 
 window.users = Object.keys(streams.users);
 window.visitor = [];
@@ -21,14 +23,13 @@ window.visitor = [];
 // utility function for adding tweets to our data structures
 var addTweet = function(newTweet){
   var username = newTweet.user;
-  if (username === 'Visitor') {
+  if (username === 'visitor') {
     visitor.push(newTweet)
   } else {
     streams.users[username].push(newTweet);
   } 
   streams.home.push(newTweet);
-  streams.newTweet++;
-  document.title = `(${streams.newTweet} twiddler`;
+
 };
 
 
@@ -81,11 +82,11 @@ var writeTweet = function(message){
   if(!visitor){
     visitor = true;
     streams.users.visitor = [];
-    users.push('Visitor')
+    users.push('visitor')
     //throw new Error('set the global visitor property!');
   }
   var tweet = {};
-  tweet.user = "Visitor";
+  tweet.user = "visitor";
   tweet.message = message;
   tweet.created_at = new Date();
   addTweet(tweet);

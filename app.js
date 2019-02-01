@@ -2,16 +2,14 @@ $(document).ready(function(){
 
 //function to make tweets
   var loadTweets = function (user) {
-    $('.stream').empty();
-    if (!user) {
-      streams.newTweet = 0;
-    }   
+    $('.stream').html('');
+  
     var allTweets = streams.home.slice();
-    if (users.includes(user) || user === 'Visitor') {
+    if (users.includes(user) || user === 'visitor') {
       allTweets = allTweets.filter(function(tweet) {
         return tweet.user === user;
       });
-    }
+    };
 
     var index = allTweets.length - 1; 
     while(index >= 0){
@@ -19,14 +17,12 @@ $(document).ready(function(){
         var tweetMessage = tweet.message;
         var date = jQuery.timeago(tweet.created_at);
         var timelineTweets = (`<li><span class ="${tweet.user}">@${tweet.user}<br></span>
-                              ${tweetMessage}<br>
-                              <div class = 'time'>${date}</div><br></li>`);
+                              ${tweetMessage}<br><div class = 'time'>${date}</div><br></li>`);
         $('.stream').append(timelineTweets);
         index --;
-    }
+    };
     $('.tweets').scrollTop();
-
-  }
+  };
 
 //handlers
   $('.load-tweets').click(function () {
@@ -35,10 +31,10 @@ $(document).ready(function(){
 
   $('.main-container').on('click','span', function() {
     let clicked = $(this).attr('class');
-    if (users.includes(clicked)) {
+    if (users.includes(clicked) || clicked === 'visitor') {
       loadTweets(clicked);
     }
-  })
+  });
 
   $('.input-tweet').keypress(function(event) {
     if (event.key === 'Enter') {
@@ -47,13 +43,23 @@ $(document).ready(function(){
         writeTweet(message.val());
       }
     loadTweets();
-    message.val('');
+    message.val(''); 
     }    
-  })
+  });
+
+  $('.submit').click(function(event) {
+      let message = $('.input-tweet');
+      if (message.length > 0) {
+        writeTweet(message.val());
+      }
+    loadTweets();
+    message.val('');  
+  });  
+
 
   $('header').click(function() {
     loadTweets();
-  })
+  });
 
 //initial tweets
   loadTweets();
@@ -107,38 +113,6 @@ $(document).ready(function(){
   //   loadTweets();
   //    $('.load-tweets').click(function () {
   //   loadTweets();
-  // });
-
-
-// $('.load-user-tweet').click(function(event) {
- //  console.log('click')
- //    e.preventDefault();
- //    var form = document.getElementById('user-tweet');
- //    var username = form.elements['user-name'].value;
- //    var message = form.elements['user-tweet'].value;
- //  if (streams.home.length > 7) {
- //    streams.home = streams.home.slice(streams.home.length - 7);
- //  }
- //  writeTweet(message);
- // })
-
-  // $('.load-user-tweet').click(function () {
-  //   $tweets.html('');
-  //   console.log('click')
-  //   var form = document.getElementById('user-tweet');
-  //   var userName = form.elements['user-name'].value;
-  //   var userTweet = form.elements['user-tweet'].value;
-  //   var $button = $('<button></button>');
-  //       $button.text = ('@' + userName);
-  //   var $tweet = $('<div></div>');
-  //       $tweet.text(userTweet);
-  //   var $date = $('<div></div>');
-  //       $date.addClass('date');
-  //       $date.html(' ' + date + '<br><br>');  
-
-//  $button.appendTo($tweets);
-  //   $tweet.appendTo($tweets);
-  //   $date.appendTo($tweets);
   // });
 
 

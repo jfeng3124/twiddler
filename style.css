@@ -68,6 +68,7 @@ input[type=text] {
 
 #user-tweet {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 }
 
@@ -75,11 +76,13 @@ input[type=text] {
 	width: 60%;
 	height: 60px;
 	margin: 20px;
+	border: 1px solid;
+	border-color: #8ed2fc ;
+	border-radius: 5px;
 }
 
-.input-tweet input {
-	width: 100%;
-	padding: 30px 5px;
+.submit{
+
 }
 
 .tweets-container {
@@ -128,10 +131,12 @@ input[type=text] {
 .time {
 	font-style: italic;
 	color: grey;
+	font-size: 14px;
 }
 
 .input-tweet::placeholder { 
     font-size: 15px;
+    color:#8ed2fc;
 }
 
 

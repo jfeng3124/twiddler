@@ -209,10 +209,10 @@ input[type=text] {
 }
 
 .submit:hover {
-	background: #d3edfe;
+	background: #91D2FA;
 	color: white;
 	border: 2px solid;
-	border-color: white;
+	border-color: #91D2FA;
 }
 .main-section {
 
@@ -226,7 +226,7 @@ input[type=text] {
 }
 
 .load-tweets {
-    background: #a5dbfd;
+    background: #8ed2fc;
     width: 500px;
     cursor: pointer;
     font-size: 12px;
@@ -235,14 +235,14 @@ input[type=text] {
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
-    transition-duration: 0.8s;
+    transition-duration: 0.7s;
     text-align: center;
     border-radius: 5px;
 }
 
 .load-tweets:hover {
-	background-color:#8ed2fc;
-	transition-duration: 0.8s;
+	background-color: #e7bbcb;
+	transition-duration: 0.7s;
 }
 
 .input-tweet:focus {
@@ -265,6 +265,7 @@ input[type=text] {
 	padding-top: -20px;
 	border-radius: 10px;
 	margin-bottom: 30px;
+	transition-duration: 0.8s;
 }
 
 .tweets li {

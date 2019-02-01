@@ -1,5 +1,6 @@
 body {
 	background-color: #38A1F3;
+	font-family: Helvetica Neue;
 }
 
 header {
@@ -47,13 +48,12 @@ input[type=text] {
 
 .main-container {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
 	border-radius: 20px;
-	background-color: white; 
- 	padding: 50px;
+	background-color: #f4fafe; 
+ 	padding: 40px;
  	padding-top: 5px;
+ 	padding-bottom: 50px;
  	margin-left: 200px;
  	margin-right: 200px;
  	margin-top: 40px;
@@ -61,40 +61,51 @@ input[type=text] {
 
 }
 
+/*.body-header {
+	background: #f4fafe;
+	padding-left: 200px;
+	padding-right: 200px;
+	margin-top: ;
+}*/
+
 .user-container {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 }
 
 
 .input-tweet {
-	width: 500px;
+	width: 420px;
 	height: 60px;
 	margin: 20px;
 	margin-left: 0px;
-	border: 1px solid;
+	border: 2px solid;
 	border-color: #8ed2fc ;
 	border-radius: 5px;
 }
 
 .submit{
-	background: none;
+	background: white;
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 13px;
 	border: 2px solid;
 	border-color: #91D2FA;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: #91D2FA;
+	width: 55px;
+	height: 25px;
+	margin-top: 43px;
 }
 
 .tweets-container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 
 .load-tweets {
@@ -109,8 +120,8 @@ input[type=text] {
     color: white;
     transition-duration: 0.4s;
     text-align: center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: -15px;
 }
 
 .load-tweets:hover {
@@ -131,14 +142,19 @@ input[type=text] {
 
 .tweets li {
 	height: auto;
-	border-bottom: 1px solid;
+	border-bottom: 2px dotted;
+	border-color: #91D2FA;
 	margin-left: -40px;
+	background: white;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 .time {
 	font-style: italic;
 	color: grey;
 	font-size: 14px;
+	tab-size: 5;
 }
 
 .input-tweet::placeholder { 

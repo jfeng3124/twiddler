@@ -23,14 +23,16 @@ p {
 }
 
 span {
+	font-family: Arial;
 	font-weight: bold;
-	font-size:25px;
+	font-size:22px;
+	color:#12344f;
 }
 
 span:hover {
 	text-decoration: underline;
 	cursor: pointer;
-	color: blue;
+	color: #059ff5;
 }
 
 li, ul {
@@ -48,7 +50,8 @@ input[type=text] {
 
 .main-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: flex-end;
 	border-radius: 20px;
 	background-color: #f4fafe; 
  	padding: 40px;
@@ -61,12 +64,15 @@ input[type=text] {
 
 }
 
-/*.body-header {
-	background: #f4fafe;
-	padding-left: 200px;
-	padding-right: 200px;
-	margin-top: ;
-}*/
+.profile-section {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.tweets-section {
+	justify-content: flex end;
+	align-items: flex-end;
+}
 
 .user-container {
 	margin-top: 15px;
@@ -84,7 +90,7 @@ input[type=text] {
 	margin: 20px;
 	margin-left: 0px;
 	border: 2px solid;
-	border-color: #8ed2fc ;
+	border-color: #8ed2fc;
 	border-radius: 5px;
 }
 
@@ -95,10 +101,14 @@ input[type=text] {
 	border: 2px solid;
 	border-color: #91D2FA;
 	border-radius: 20px;
-	color: #91D2FA;
+	color: #d3edfe;
 	width: 55px;
 	height: 25px;
 	margin-top: 43px;
+}
+
+.main-section {
+
 }
 
 .tweets-container {
@@ -109,23 +119,21 @@ input[type=text] {
 }
 
 .load-tweets {
-    background: #38A1F3;
-    opacity: 0.7;
+    background: #a5dbfd;
     width: 500px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 12px;
     font-family: Helvetica Neue;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
-    transition-duration: 0.4s;
+    transition-duration: 0.8s;
     text-align: center;
     border-radius: 5px;
-    margin-bottom: -15px;
 }
 
 .load-tweets:hover {
-	background-color:#91D2FA;
+	background-color:#8ed2fc;
 	transition-duration: 0.8s;
 }
 
@@ -133,11 +141,21 @@ input[type=text] {
 	outline:none;
 }
 
+.tweet-title {
+	text-align: center;
+	font-size: 20px;
+	font-family: Arial;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #1b496e;
+}
+
 .tweets {
 	overflow: auto;
 	height: 600px;
 	width: 500px;
-
+	padding-top: -20px;
+	border-radius: 20px;
 }
 
 .tweets li {
@@ -147,22 +165,19 @@ input[type=text] {
 	margin-left: -40px;
 	background: white;
 	padding: 10px;
-	border-radius: 20px;
+	border-radius: 5px;
 }
 
 .time {
 	font-style: italic;
 	color: grey;
 	font-size: 14px;
-	tab-size: 5;
 }
 
 .input-tweet::placeholder { 
     font-size: 15px;
-    color:#8ed2fc;
+    color:#d3edfe;
 }
-
-
 
 
 

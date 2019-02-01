@@ -41,6 +41,10 @@ textarea {
 	font-size: 15px;
 }
 
+input[type=text] {
+	font-size: 15px;
+}
+
 .main-container {
 	display: flex;
 	justify-content: center;
@@ -53,20 +57,18 @@ textarea {
  	margin-right: 200px;
  	margin-top: 40px;
  	margin-bottom: 50px;
- 	border: 1px solid;
+
 }
 
 .user-container {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 100%;
-	border: 1px solid;
 }
 
 #user-tweet {
 	display: flex;
 	justify-content: center;
-	border: 1px solid;
 }
 
 .input-tweet {
@@ -128,5 +130,15 @@ textarea {
 	color: grey;
 }
 
-::-webkit-input-placeholder-shown { /* Webkit */
-    line-height:600px;
+.input-tweet::placeholder { 
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+

@@ -54,10 +54,8 @@ var addTweet = function(newTweet){
     streams.users[username].push(newTweet);
   } 
   streams.home.push(newTweet);
-
+  visitor.push(newTweet);
 };
-
-
 
 // utility function
 var randomElement = function(array){
@@ -104,12 +102,12 @@ scheduleNextTweet();
 // utility function for letting students add "write a tweet" functionality
 // (note: not used by the rest of this file.)
 var writeTweet = function(message){
-  if(!visitor){
-    visitor = true;
-    streams.users.visitor = [];
-    users.push('visitor')
+  // if(!visitor){
+  //   visitor = true;
+    // streams.users.visitor = [];
+    // users.push('visitor')
     //throw new Error('set the global visitor property!');
-  }
+  //}
   var tweet = {};
   tweet.user = "visitor";
   tweet.message = message;

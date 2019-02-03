@@ -16,15 +16,21 @@ $(document).ready(function(){
         var tweet = allTweets[index];
         var tweetMessage = tweet.message;
         var date = jQuery.timeago(tweet.created_at);
-        var timelineTweets = (`<li><span class ="${tweet.user}">${streams.avatars[tweet.user]}<strong>${streams.names[tweet.user]}</strong> @${tweet.user}<br></span>
-
+        var timelineTweets = (`<li><span class ="${tweet.user}">${streams.avatars[tweet.user]}
+                              <strong>${streams.names[tweet.user]}</strong> @${tweet.user}<br></span>
                               ${tweetMessage}<br><div class = 'time'>${date}</div><br></li>`);
         $('.stream').append(timelineTweets);
-        // $('.stream').append(`<li><span class="${tweet.user}">${streams.avatars[tweet.user]}</span><p><span class="${tweet.user}"><strong>${streams.names[tweet.user]}</strong>  @${tweet.user}</span></p><p>${tweetMessage}</p> <p><span class="timestamp">${jQuery.timeago(tweet.created_at)}</span></p></li>`);
+      
         index --;
     };
     $('.tweets').scrollTop();
   };
+
+  // var userTweets = function (user) {
+  //   $('.stream').html('');
+
+
+  // }
 
 //handlers
   $('.load-tweets').click(function () {
@@ -33,10 +39,18 @@ $(document).ready(function(){
 
   $('.main-container').on('click','span', function() {
     let clicked = $(this).attr('class');
+    console.log(clicked)
     if (users.includes(clicked) || clicked === 'visitor') {
       loadTweets(clicked);
     }
   });
+
+  // $('.profile-button').on('click', function() {
+  //   let clicked = $('visitor')
+  //   console.log(clicked); 
+  //     loadTweets(clicked);
+
+  // });
 
   $('.input-tweet').keypress(function(event) {
     if (event.key === 'Enter') {

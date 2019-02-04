@@ -20,7 +20,7 @@ $(document).ready(function(){
                               <strong>${streams.names[tweet.user]}</strong> @${tweet.user}<br></span>
                               ${tweetMessage}<br><div class = 'time'>${date}</div><br></li>`);
         $('.stream').append(timelineTweets);
-      
+
         index --;
     };
     $('.tweets').scrollTop();
@@ -39,15 +39,13 @@ $(document).ready(function(){
 
   $('.main-container').on('click','span', function() {
     let clicked = $(this).attr('class');
-    console.log(clicked)
     if (users.includes(clicked) || clicked === 'visitor') {
       loadTweets(clicked);
     }
   });
 
-  // $('.profile-button').on('click', function() {
-  //   let clicked = $('visitor')
-  //   console.log(clicked); 
+  // $('.profile-button').on('click', 'id' function() {
+  //   let clicked = $(this).attr('id');
   //     loadTweets(clicked);
 
   // });

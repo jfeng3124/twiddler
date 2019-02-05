@@ -3,4 +3,7 @@ things to do:
 //have it load into .tweets box
 //collapse old tweets
 //add profile page
+//twiddler title clickable for new tweets
+make profile name clickable so it can show visitor tweets
 make hashtags into buttons to match trends
+Make trends generator to populate tweets & trends box

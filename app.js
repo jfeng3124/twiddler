@@ -41,12 +41,6 @@ $(document).ready(function(){
     }
   });
 
-  // $('.profile-button').on('click', 'id' function() {
-  //   let clicked = $(this).attr('id');
-  //     loadTweets(clicked);
-
-  // });
-
   $('.input-tweet').keypress(function(event) {
     if (event.key === 'Enter') {
       let message = $(this).slice();

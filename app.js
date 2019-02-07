@@ -12,7 +12,7 @@ $(document).ready(function(){
     };
 
     var index = allTweets.length - 1; 
-    while(index >= 0){
+    while (index >= 0) {
         var tweet = allTweets[index];
         var tweetMessage = tweet.message;
         var date = jQuery.timeago(tweet.created_at);
@@ -26,6 +26,8 @@ $(document).ready(function(){
     $('.tweets').scrollTop();
   };
 
+//initial tweets
+  loadTweets();
 
 //handlers
   $('.load-tweets').click(function () {
@@ -73,9 +75,6 @@ $(document).ready(function(){
   $('#title').on('click', function() {
     loadTweets();
   });
-
-//initial tweets
-  loadTweets();
 });
 
 

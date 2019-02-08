@@ -64,11 +64,11 @@ var randomElement = function(array){
 };
 
 // random tweet generator
-var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'nearly', 'productively', 'efficiently', 'last night I', 'the president', 'that wizard', 'a ninja', 'a seedy old man'];
-var verbs = ['downloaded', 'interfaced', 'deployed', 'developed', 'built', 'invented', 'experienced', 'navigated', 'aided', 'enjoyed', 'engineered', 'installed', 'debugged', 'delegated', 'automated', 'formulated', 'systematized', 'overhauled', 'computed'];
+var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'nearly', 'bravely', 'fearlessly', 'last night I', 'today I', 'the yokai', 'an enemy', 'happily'];
+var verbs = ['fought', 'destroyed', 'saved', 'transformed', 'punished', 'invented', 'experienced', 'kicked', 'aided', 'enjoyed', 'battled', 'found', 'ate', 'rescued', 'made', 'created', 'ran', 'formed', 'played'];
 var objects = ['my', 'your', 'the', 'a', 'my', 'an entire', 'this', 'that', 'the', 'the big', 'a new form of'];
-var nouns = ['cat', 'koolaid', 'system', 'city', 'worm', 'cloud', 'potato', 'money', 'way of life', 'belief system', 'security system', 'bad decision', 'future', 'life', 'pony', 'mind'];
-var tags = ['#techlife', '#burningman', '#sf', 'but only I know how', 'for real', '#sxsw', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
+var nouns = ['cat', 'moon', 'cake', 'city', 'video game', 'cloud', 'odango', 'money', 'way of life', 'enemy', 'yokai', 'bad decision', 'moon', 'life', 'pony', 'mind'];
+var tags = ['#sailorsenshi', '#mooncastle', '#neotokyo', 'but only I know how', 'for real', '#sailorlife', '#ballin', '#squad', '#love', '#magic', '', '', '', ''];
 
 var randomMessage = function(){
   return [randomElement(opening), randomElement(verbs), randomElement(objects), randomElement(nouns), randomElement(tags)].join(' ');
